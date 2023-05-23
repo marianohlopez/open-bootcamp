@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de Directores</title>
+</head>
+
+<body>
+    <h1>Directores de Cine</h1>
+    <ul>
+        {% for director in directores %}
+        <li><a href="{% url 'director:detalle_director' director.id %}">{{ director.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

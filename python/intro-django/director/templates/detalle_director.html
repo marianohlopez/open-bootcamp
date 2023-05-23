@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Detalle del Director</title>
+</head>
+
+<body>
+    <h1>{{ director.nombre }}</h1>
+    <p>Fecha de Nacimiento: {{ director.fecha_nacimiento }}</p>
+    <h2>Películas:</h2>
+    <ul>
+        {% for pelicula in director.pelicula_set.all %}
+        <li><a href="{% url 'director:detalle_pelicula' pelicula.id %}">{{ pelicula.titulo }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
