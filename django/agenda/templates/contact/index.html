@@ -7,13 +7,13 @@
   <input type="text" name="search" placeholder="buscar contacto" id="">
   <input type="submit" value="Buscar">
 </form>
-<span><a href="#">Ver todos</a><a href="#">Añadir</a></span>
+<span><a href="{% url 'contact' %}">Ver todos</a><a href="{% url 'contact_create' %}">Añadir</a></span>
 <ul class="list">
   {% for contact in contacts %}
   <li>{{contact}}
     <span>
-      <a href="#">Ver</a>
-      <a href="#">Editar</a>
+      <a href="{% url 'contact_view' id=contact.id %}">Ver</a>
+      <a href="{% url 'contact_edit' id=contact.id %}">Editar</a>
       <a href="#">Borrar</a>
     </span>
   </li>
