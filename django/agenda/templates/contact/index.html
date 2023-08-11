@@ -14,7 +14,7 @@
     <span>
       <a href="{% url 'contact_view' id=contact.id %}">Ver</a>
       <a href="{% url 'contact_edit' id=contact.id %}">Editar</a>
-      <a href="#">Borrar</a>
+      <a href="{% url 'contact_delete' id=contact.id %}">Borrar</a>
     </span>
   </li>
   {% endfor %}
